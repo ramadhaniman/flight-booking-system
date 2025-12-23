@@ -21,9 +21,11 @@ class TransactionForm
                             ->relationship('flight', 'flight_number'),
                         Select::make('flight_class_id')
                             ->relationship('class', 'class_type'),
-                    ]),
+                    ])
+                ->columnSpan(2),
                 Section::make('Informasi Penumpang')
                     ->schema([
+                        TextInput::make('number_of_passengers'),
                         TextInput::make('name'),
                         TextInput::make('email'),
                         TextInput::make('phone'),
@@ -39,6 +41,17 @@ class TransactionForm
                                     ])
                             ])
                     ])
+                ->columnSpan(2),
+                Section::make('Pembayaran')
+                    ->schema([
+                        TextInput::make('promo.code'),
+                        TextInput::make('promo.discount_type'),
+                        TextInput::make('promo.discount'),
+                        TextInput::make('payment_status'),
+                        TextInput::make('subtotal'),
+                        TextInput::make('grandtotal'),
+                    ])
+                ->columnSpan(2)
             ]);
     }
 }
