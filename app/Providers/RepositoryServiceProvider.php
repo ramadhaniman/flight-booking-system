@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Interfaces\AirlineRepositoryInterface;
+use App\Interfaces\AirportRepositoryInterface;
+use App\Interfaces\FlightRepositoryInterface;
+use App\Interfaces\TransactionRepositoryInterface; 
 use App\Repositories\AirlineRepository;
 use App\Repositories\AirportRepository;
 use App\Repositories\FlightRepository;

@@ -2,12 +2,12 @@
 
 namespace App\Repositories;
 
-use App\Interfaces\AirlineRepositoryInterface;
+use App\Interfaces\AirportRepositoryInterface;
 use App\Models\Airport;
 
 class AirportRepository implements AirportRepositoryInterface
 {
-    public function getAllAirport()
+    public function getAllAirports()
     {
         return Airport::all();
     }

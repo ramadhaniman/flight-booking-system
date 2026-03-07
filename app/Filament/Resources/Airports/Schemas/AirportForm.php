@@ -12,7 +12,7 @@ class AirportForm
     {
         return $schema
             ->components([
-                FileUpload::make('image')->image()->directory('airports')->required()->columnSpan(2),
+                FileUpload::make('image')->image()->directory('airports')->disk('public')->required()->columnSpan(2),
                 TextInput::make('iata_code')->required(),
                 TextInput::make('name')->required(),
                 TextInput::make('city')->required(),
